@@ -15,8 +15,6 @@ const input = document.querySelector('.input_search');
 
 
 //Função para pegar as informações da API do pokemon
-//toLowerCase transforma o dado a ser passado para a API em letras minúsculas
-//Evitando erros na busca
 const fech_poke = async (poke) => {
     const api_Response = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke}`);
 
@@ -82,7 +80,8 @@ const render_poke = async (poke) => {
 }
 
 //Função para coletar a informação do que o usuário digitou
-
+//toLowerCase transforma o dado a ser passado para a API em letras minúsculas
+//Evitando erros na busca
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     render_poke(input.value.toLowerCase());
