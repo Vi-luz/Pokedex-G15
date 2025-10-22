@@ -1,0 +1,26 @@
+.texto {
+    font-family: "Roboto Mono", sans-serif;
+}
+
+.titulo {
+    font-family: "Press Start 2P", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 10rem;
+    height: 10rem;
+}
+
+.imagem-poke {
+    height: 2rem;
+    width: 2rem;
+}
+
+.corpo {
+    background-image: url(./assets/background-ash.jpg);
+    height: 100%;
+}
