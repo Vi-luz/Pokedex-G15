@@ -1,52 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&display=swap"
+    rel="stylesheet">
   <!-- outra fonta -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
   <title>Pokedex</title>
-  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div>
-    <header>
-      
-      <div>
-        <img class="imagem-poke" src="./assets/pokegif.gif" alt="">
-        <h1 class="titulo">Pokemon</h1>
+  <header class="header">
+    <div class="container">
+      <div class="container-esquerda">
+        <img class="imagem-poke" src="./assets/pokegif.gif" alt="Pokébola girando">
+        <h1 class="titulo">Pokémon</h1>
       </div>
 
-      <nav class="">
-        <a href="paginaInicial.html" class="texto">
-          <span>Início</span>
-        </a>
-        <a href="#pokedex">
-          <span>Pokedex</span>
-        </a>
-        <a href="paginaCuriosidades.html">
-          <span>Curiosidades</span>
-        </a>
-        <a href="paginaGame.html">
-          <span>Game</span>
-        </a>
-      </nav>
+      <button class="menu-toggle">☰</button>
 
-      <a href="paginaPerfil.html">
-          <img src="./assets/user-round (1).svg" alt="">
-        </a>
-
-    </header>
-
-    <div class="corpo">
-      <h1>Qualquer coisa</h1>
+      <div>
+        <nav class="container-direita">
+          <a href="pagina-inicial.html" class="texto ativo">Início</a>
+          <a href="#pokedex">Pokédex</a>
+          <a href="pagina-curiosidades.html">Curiosidades</a>
+          <a href="pagina-game.html">Game</a>
+          <a href="pagina-perfil.html">
+            <img src="./assets/user-round (1).svg" alt="Perfil do usuário">
+          </a>
+        </nav>
+      </div>
     </div>
+    <div class="linha"></div>
+  </header>
 
+  <section class="inicio">
+  <div class="inicio-conteudo">
+    <h1 class="inicio-titulo">
+      DESCUBRA, APRENDA E EVOLUA SEUS CONHECIMENTOS SOBRE O MUNDO POKÉMON
+    </h1>
+    <h2 class="inicio-subtitulo">O que é uma Pokédex?</h2>
+    <p class="inicio-texto">
+      Uma Pokédex é uma enciclopédia digital portátil dentro do universo Pokémon
+      que serve para catalogar e fornecer informações detalhadas sobre as diferentes
+      espécies de Pokémon. Criada pelo Professor Carvalho e dada aos treinadores,
+      a Pokédex registra os Pokémon que são vistos ou capturados, exibindo dados como
+      aparência, tipo, habilidades, evoluções e habitat, além de registrar seu número,
+      altura, peso e localização.
+    </p>
   </div>
+</section>
+
+<section class="pokedex-lista">
+  <div class="pokedex-filtros">
+    <input
+      type="text"
+      id="buscaPokemon"
+      placeholder="Pesquisar Pokémon por nome ou ID..."
+    />
+
+    <select id="filtroGeracao">
+      <option value="all">Todas as gerações</option>
+      <option value="1">Geração 1 (Kanto)</option>
+      <option value="2">Geração 2 (Johto)</option>
+      <option value="3">Geração 3 (Hoenn)</option>
+      <option value="4">Geração 4 (Sinnoh)</option>
+      <option value="5">Geração 5 (Unova)</option>
+      <option value="6">Geração 6 (Kalos)</option>
+      <option value="7">Geração 7 (Alola)</option>
+      <option value="8">Geração 8 (Galar)</option>
+      <option value="9">Geração 9 (Paldea)</option>
+    </select>
+  </div>
+
+  <div id="pokemonsContainer" class="pokemons-container">
+    <!-- Cards de Pokémon aparecerão aqui -->
+  </div>
+</section>
+
+  <script src="code.js"></script>
 </body>
 </html>
