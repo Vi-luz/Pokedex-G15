@@ -14,10 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
   <!-- Links css -->
-  <link rel="stylesheet" type="text/css" href="reset.css">
-  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="paginaReset.css">
+  <link rel="stylesheet" type="text/css" href="paginaHeader.css">
   <link rel="stylesheet" type="text/css" href="paginaInicial.css">
-  <link rel="stylesheet" type="text/css" href="pokedex.css">
+  <link rel="stylesheet" type="text/css" href="paginaPokedex.css">
 
   <!-- FavIcon -->
   <link rel="icon" type="image/x-icon" href="./assets/Pokeball_icon.svg">
@@ -40,7 +40,6 @@
             <a href="pagina-inicial.html" class="texto ativo">Início</a>
             <a href="pagina-inicial.html#pokedex" class="texto">Pokédex</a>
             <a href="pagina-curiosidades.html" class="texto">Curiosidades</a>
-            <a href="pagina-game.html" class="texto">Game</a>
             <a href="pagina-perfil.html" aria-label="Perfil do Usuário">
               <img src="./assets/user-round (1).svg" alt="Icone do usuário">
             </a>
@@ -70,14 +69,15 @@
   
     <!-- Seção Pokédex -->
     <section class="busca-filtros" id="pokedex" aria-labelledby="titulo-pokedex">
-      <h2 id="titulo-pokedex" class="sr-only">Busca e filtros da Pokédex</h2><!-- Texto para acessibilidade -->
+      <h2 id="titulo-pokedex" class="sr-only">Procure um Pokémon</h2><!-- Texto para acessibilidade -->
 
       <div class="busca">
-        <input type="text" id="text-busca" placeholder="Buscar pokémon" aria-label="Buscar Pokémon"/>
+        <input type="text" id="text-busca" placeholder="Nome ou id do pokémon" aria-label="Buscar Pokémon"/>
       </div>
 
       <div class="filtros">
-        <select id="filtro-geracao" aria-label="Filtrar por geração">  
+        <select id="filtro-geracao" aria-label="Filtrar por geração">
+          <option value="all-gen">Todos os Pokemon</option>
           <option value="primeira-gen">Primeira Geração</option>
           <option value="segunda-gen">Segunda Geração</option>
           <option value="terceira-gen">Terceira Geração</option>
@@ -115,12 +115,13 @@
 
     <!-- Lista de Pokémons -->
     <section class="lista-pokemons" id="lista-pokemons" aria-live="polite">
-      <!-- Conteúdo gerado pelo JavaScripc -->
+      <!-- Conteúdo gerado pelo JavaScript -->
     </section>
 
   </main>
 
   <!-- Scripts -->
   <script src="code.js" defer></script>
+  <script src="codeheader.js"></script>
 </body>
 </html>
